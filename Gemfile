@@ -42,6 +42,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
+  gem 'capistrano-faster-assets'
 end
 
 group :development, :test do
