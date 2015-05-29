@@ -1,8 +1,11 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'Kul Jakke'
+set :application, 'kuljakke'
 set :repo_url, 'git@github.com:Filip0/kuljakke.git'
+
+set :rvm_type, :user
+set :rvm_ruby_version, '2.1.4'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
