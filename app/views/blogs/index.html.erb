@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="thin-font">Listing Blogs</h1>
+    <% @blogs.each do |blog| %>
+    <div>
+      <%= render blog %>
+    </div>
+    <% end %>
+<br>
+

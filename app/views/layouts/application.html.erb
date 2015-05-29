@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kuljakke</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,400,100italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <body class="Site">
+    <header>
+      <a href="/"><h1>Kul Jakke</h1></a>
+      <h2>Produksjoner</h2>
+      <nav>
+        <ul class="nav-ul">
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/blogs">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+           <div class="notice"><%= notice %></div>
+       <div class="alert"><%= alert %></div>
+
+    <div class="content">
+  		<%= yield %>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="footer-social">
+          <ul class="list-inline">
+            <li><a class="no-style" href="http://facebook.com/kuljakk"><i class="fa fa-facebook fa-2x"></i></a></li>
+            <li><a class="no-style" href="http://twitter.com/kuljakke"><i class="fa fa-twitter fa-2x"></i></a></li>
+            <li><a class="no-style" href="http://instagram.com/kuljakke"><i class="fa fa-instagram fa-2x"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          Copyright @ Kul Jakke Produksjoner
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
