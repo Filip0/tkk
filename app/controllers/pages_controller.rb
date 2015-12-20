@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
-  def portfolio
-  end
 
-  def contact
-  end
+	def show
+		@page = Page.find_by!(name: params[:id])
+	end
 
-  def about
-  end
 end

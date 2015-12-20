@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'portfolio' => 'pages#portfolio'
-  get 'contact' => 'pages#contact'
-  get 'about' => 'pages#about'
+
 
   mount Ckeditor::Engine => '/ckeditor'
   get 'welcome/index'
@@ -15,8 +13,10 @@ Rails.application.routes.draw do
     root 'blogs#index'
     resources :blogs, only: [:index, :show, :new, :edit,:update, :create]
     resources :users, only: [:new, :create, :show, :index]
+    resources :pages
   end
 
+  get '/:id', to: 'pages#show'
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
