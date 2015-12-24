@@ -1,5 +1,5 @@
 <%= simple_form_for [:admin, @blog] do |f| %>
   <%= f.input :title %>
-  <%= f.input :text, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
-  <%= f.submit %>
+  <%= f.input :text, input_html: { class: 'simplemde' } %>
+  <%= f.submit class: 'btn' %>
 <% end %>

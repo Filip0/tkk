@@ -29,6 +29,11 @@ gem 'paperclip'
 gem 'devise'
 gem 'cancancan'
 
+gem 'redcarpet'
+gem 'simpleMDE-rails', path: '~/git/simpleMDE-rails'
+
+gem 'normalize-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -43,6 +48,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano-faster-assets'
+  gem 'quiet_assets'
 end
 
 group :development, :test do

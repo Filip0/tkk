@@ -2,32 +2,35 @@
 <html>
 <head>
   <title>Kuljakke</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-      <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:100,400,100italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
   <body class="Site">
     <header>
-      <a href="/"><h1>Kul Jakke - Admin</h1></a>
-      <h2>Produksjoner</h2>
+      <div class="logo">
+        <a href="/"><%= image_tag("logo.png") %></a>
+      </div>
       <nav>
         <ul class="nav-ul">
-          <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/contact">Contact</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/blogs">Blog</a></li>
-          <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+          <li><a href="/contact">Contact</a></li>
+          <% if user_signed_in? %>
+            <li><%= link_to("Admin", admin_root_url ) %></li>
+          <% end %>
         </ul>
       </nav>
     </header>
-           <div class="notice"><%= notice %></div>
-       <div class="alert"><%= alert %></div>
 
     <div class="content">
-  		<%= yield %>
+      <% if flash[:notice] %>
+        <div class="notice"><%= notice %></div>
+      <% elsif flash[:alert] %>
+        <div class="alert"><%= alert %></div>
+      <% end %>
+      <%= yield %>
     </div>
     <footer>
       <div class="footer">

@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
-    root 'blogs#index'
-    resources :blogs, only: [:index, :show, :new, :edit,:update, :create]
+    root 'admin#index'
+    resources :blogs
     resources :users, only: [:new, :create, :show, :index]
     resources :pages
   end
