@@ -1,8 +1,9 @@
 GIT
   remote: https://github.com/Filip0/simpleMDE-rails.git
-  revision: ab4914516751b196626e912f4a67c823ca8a42f6
+  revision: 5e9213e6b835e004ac017cebb1764dede5972bf8
+  branch: dev
   specs:
-    simpleMDE-rails (1.9.0)
+    simpleMDE-rails (0.0.1)
 
 GEM
   remote: https://rubygems.org/

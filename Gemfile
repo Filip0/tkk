@@ -30,7 +30,7 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'redcarpet'
-gem 'simpleMDE-rails', git: 'https://github.com/Filip0/simpleMDE-rails.git'
+gem 'simpleMDE-rails', git: 'https://github.com/Filip0/simpleMDE-rails.git', branch: 'dev'
 
 gem 'normalize-rails'
 
