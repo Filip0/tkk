@@ -48,7 +48,7 @@ Rails.application.configure do
   # when problems arise.
   config.log_level = :debug
 
-  config.action_mailer.default_url_options = { host: 'trondheimkonsertkollektiv.no' }
+  config.action_mailer.default_url_options = { host: 'konsertkollektiv.no' }
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
