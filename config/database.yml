@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: kuljakke
+  database: tkk
   host: localhost
   pool: 5
   username: circon
@@ -10,7 +10,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: kuljakke_test
+  database: tkk_test
   host: localhost
   pool: 5
   username: circon

@@ -1,8 +1,8 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'kuljakke'
-set :repo_url, 'git@github.com:Filip0/kuljakke.git'
+set :application, 'tkk'
+set :repo_url, 'git@github.com:Filip0/tkk.git'
 
 set :rvm_type, :user
 set :rvm_ruby_version, '2.1.4'
