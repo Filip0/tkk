@@ -12,21 +12,28 @@ body {
   flex-direction: column;
   background-color: #f1f1f1;
 }
+.header-wrapper {
+  background-color: #f7f0dd;
+  width: 100%;
+}
 header {
-  background-image: image-url("bilde-fjell.jpg");
-  //background-position: center;
-  color: #fff;
+  display: flex;
+  max-width: 50em;
+  margin: 0 auto;
+  width: 100%;
+  align-items: flex-end;
+  flex-wrap: wrap;
 
   .logo {
     display: inline-block;
-    width: 100%;
+    flex: 0 0 30%;
+    //width: 30%;
     img {
-      width: 50px;
-      float: right;
-      margin: 30px 10px 5px 5px;
+      width: 200px;
+      margin: 3em 2em 0.5em 2em;
 
       @media (max-width: $on-phone) {
-        width: 25px;
+        width: 200px;
       }
     }
   }
@@ -54,11 +61,10 @@ header {
 }
 
 nav {
-  background: rgba(#000, 0.7);
-  font-weight: 300;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex: 0 0 60%;
+  //width: 60%;
+  display: inline-block;
+  margin-bottom: 0.5em;
 
   .nav-ul {
     margin: 0;
@@ -71,6 +77,8 @@ nav {
     }
     a:link {
       font-size: 18px;
+      font-weight: bold;
+      color: #030000;
       text-decoration: none;
     }
     a:active {
@@ -111,7 +119,7 @@ ul.list-inline > li {
 }
 footer {
   margin-top: $spacing-unit;
-  background-color: #FAFAFA;
+  background-color: #f7f0dd;
   font-weight: 100;
 }
 .footer {
@@ -123,7 +131,7 @@ footer {
   flex-direction: column;
 }
 a.no-style {
-  color: #cccccc;
+  color: #3A3D3B;
   text-decoration: none;
 }
 .footer-social {
@@ -132,9 +140,8 @@ a.no-style {
 .footer-copyright {
   font-size: 20px;
   flex: 1;
-}
-.footer-social a:hover {
-  color: #af111c;
+  color: #3A3D3B;
+  font-weight: bold;
 }
 .img-circle {
   width: 150px;
