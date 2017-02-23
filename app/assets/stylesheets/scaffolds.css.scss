@@ -4,6 +4,10 @@
   -webkit-box-sizing: border-box;
 }
 
+$blue: #2DACB3;
+$grey: #3A3D3B;
+$red: #E84F5E;
+
 body {
   font-family: $font-family-base;
   margin: 0;
@@ -15,6 +19,17 @@ body {
 .header-wrapper {
   background-color: #f7f0dd;
   width: 100%;
+  position: relative;
+
+  &:after {
+    content: '';
+    height: 2px;
+    background-color: $grey;
+    border-bottom: 2px solid $red;
+    border-top: 2px solid $blue;
+    position: absolute;
+    width: 100%;
+  }
 }
 header {
   display: flex;
