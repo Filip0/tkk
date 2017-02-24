@@ -1,0 +1,5 @@
+= simple_form_for [:admin, @page] do |f|
+  = f.input :title
+  = f.input :text, input_html: { class: 'simplemde' }
+  = f.input :name
+  = f.submit

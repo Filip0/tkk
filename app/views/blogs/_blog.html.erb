@@ -1,7 +1,0 @@
-<h1 class="blog-title"><%= link_to(blog.title, blog) %></h1>
-<p class="blog-time"><%= blog.created_at.to_s(:short) %></p>
-<div>
-  <%= markdown(blog.text) %>
-  <%#= markdown(truncate(blog.text, length: 400)).html_safe %>
-  <%#= link_to("Read more", blog) %>
-</div>

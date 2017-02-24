@@ -1,0 +1,16 @@
+%h1.thin-font Listing Blogs
+%table
+  %thead
+    %tr
+      %th Title
+      %th Created at
+      %th{:colspan => "3"}
+  %tbody
+    - @blogs.each do |blog|
+      %tr
+        %td= blog.title
+        %td= blog.created_at.to_s(:short)
+        %td= link_to 'Show', [:admin,blog]
+        %td= link_to 'Edit', edit_admin_blog_path(blog)
+        %td= link_to 'Destroy', [:admin, blog], method: :delete, data: { confirm: 'Are you sure?' }
+  = link_to 'New blog', new_admin_blog_path

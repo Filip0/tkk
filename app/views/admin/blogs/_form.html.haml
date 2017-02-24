@@ -1,0 +1,4 @@
+= simple_form_for [:admin, @blog] do |f|
+  = f.input :title
+  = f.input :text, input_html: { class: 'simplemde' }
+  = f.submit class: 'btn'

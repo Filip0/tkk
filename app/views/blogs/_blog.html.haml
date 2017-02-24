@@ -1,0 +1,4 @@
+%h1.blog-title= link_to(blog.title, blog)
+%p.blog-time= blog.created_at.to_s(:short)
+%div
+  = markdown(blog.text)

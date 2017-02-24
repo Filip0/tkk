@@ -1,0 +1,15 @@
+%h1 Listing Events
+.events-month-list
+  - @events.order(:start_date).group_by { |m| m.start_date.month }.each do |month, events|
+    .month
+      .month-name= Date::MONTHNAMES[month]
+      .days
+        - events.group_by { |e| e.start_date.day }.each do |day, events|
+          .day
+            .day-title=day
+            .events
+              - events.each do |event|
+                .event
+                  %span.event-title=event.title
+                  %span.event-price=event.price
+                  %span.event-time=event.start_date.to_s(:time)

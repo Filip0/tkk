@@ -1,0 +1,51 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Trondheim Konsertkollektiv
+    %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body.Site
+    .header-wrapper
+      %header
+        .logo
+          %a{:href => "/"}= image_tag("logo3.png")
+        %nav
+          %ul.nav-ul
+            %li
+              %a{:href => "/events"} KONSERTER
+            %li
+              %a{:href => "/about"} OM OSS
+            %li
+              %a{:href => "/contact"} KONTAKT
+            - if user_signed_in?
+              %li= link_to("ADMIN", admin_root_url)
+    .content
+      - if flash[:notice]
+        .notice= notice
+      - elsif flash[:alert]
+        .alert= alert
+      = yield
+    %footer
+      .footer
+        .footer-social
+          %ul.list-inline
+            %li
+              %a.no-style{:href => "http://fb.me/trondheimkonsertkollektiv"}
+                %span.fa-stack.fa-lg
+                  %i.fa.fa-circle.fa-stack-2x
+                  %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+            %li
+              %a.no-style{:href => "https://www.instagram.com/konsertkollektiv/"}
+                %span.fa-stack.fa-lg
+                  %i.fa.fa-circle.fa-stack-2x
+                  %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+            %li
+              %a.no-style{:href => "https://twitter.com/TrKoKollektiv"}
+                %span.fa-stack.fa-lg
+                  %i.fa.fa-circle.fa-stack-2x
+                  %i.fa.fa-instagram.fa-stack-1x.fa-inverse
+        .footer-copyright
+          TRONDHEIM KONSERTKOLLEKTIV

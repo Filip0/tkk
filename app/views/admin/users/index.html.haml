@@ -1,0 +1,19 @@
+%p#notice= notice
+%h1.thin-font Listing Users
+%table
+  %thead
+    %tr
+      %th Email
+      %th First Name
+      %th Last Name
+      %th Created at
+      %th
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.email
+        %td= user.first_name
+        %td= user.last_name
+        %td= user.created_at
+        %td= link_to 'Show', [:admin,user]
+  = link_to 'New user', new_admin_user_path

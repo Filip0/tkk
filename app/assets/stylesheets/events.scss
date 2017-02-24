@@ -1,3 +1,41 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.events-month-list {
+  .month {
+    .month-name {
+      font-size: 18px;
+      padding-top: 1em;
+    }
+  }
+  .days {
+    .day {
+      width: 100%;
+      display: flex;
+      border: 1px solid black;
+    }
+    .day-title {
+      font-size: 24px;
+      width: 40px;
+      flex: 0 0 auto;
+      text-align: center;
+    }
+    .events {
+      flex: 1 1 auto;
+    }
+    .event {
+      display: flex;
+      .event-title {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .event-price {
+        text-align: right;
+        margin-left: auto;
+      }
+      .event-time {
+        text-align: right;
+      }
+    }
+  }
+}

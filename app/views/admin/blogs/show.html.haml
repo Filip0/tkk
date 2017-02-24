@@ -1,0 +1,3 @@
+%h1= @blog.title
+%p.blog-time= @blog.created_at.to_s(:short)
+%div= markdown(@blog.text)
