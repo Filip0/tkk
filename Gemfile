@@ -18,6 +18,9 @@ gem 'jquery-rails'
 
 # Use jquery with turbolinks
 gem 'jquery-turbolinks'
+
+# Jquery ui for asset pipeline
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -54,6 +57,7 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-faster-assets'
   gem 'quiet_assets'
+	gem 'faker', '1.7.3'
 end
 
 group :development, :test do

@@ -29,5 +29,8 @@
   <strong>Price:</strong>
   <%= @event.price %>
 </p>
+<div class="event-description">
+  <%= markdown(@event.description) %>
+</div>
 
 <%= link_to 'Back', events_path %>

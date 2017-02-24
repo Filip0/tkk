@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require jquery-ui
 //= require ckeditor/init
 //= require simplemde.min
 //= require turbolinks
@@ -24,4 +25,10 @@ $(function() {
 	for (var i = elements.length - 1; i >= 0; i--) {
 		new SimpleMDE({ element: elements[i] });
 	};
-})
+});
+
+$( function() {
+	$( "#tabs" ).tabs({
+		collapsible: true
+	});
+} );

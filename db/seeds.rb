@@ -5,4 +5,34 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+puts "Clearing db"
+
+tables = ActiveRecord::Base.connection.tables
+tables.delete("schema_migrations")
+puts "Truncating tables #{tables * ", "}."
+
+tables.each do |table|
+  ActiveRecord::Base.connection.execute("TRUNCATE #{table} CASCADE")
+end
+
+
 User.create(first_name: "Admin", email: "admin@admin.com", password: "password")
+
+
+puts "Creating events"
+100.times do
+  start_date = Faker::Date.between(Date.today, 6.months.from_now)
+  end_date = start_date + rand(0..3).hours
+  performer = Faker::RockBand.name
+  location = Faker::Address.city
+  Event.create(
+    title: "#{performer} at #{location}",
+    performer: performer,
+    start_date: start_date,
+    end_date: end_date,
+    location: Faker::Address.city,
+    price: Faker::Number.number(3),
+    description: Faker::Lorem.paragraph(2)
+  )
+  print '.'
+end

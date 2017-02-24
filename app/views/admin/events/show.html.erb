@@ -29,6 +29,9 @@
   <strong>Price:</strong>
   <%= @event.price %>
 </p>
+<div class="event-description">
+  <%= markdown(@event.description) %>
+</div>
 
 <%= link_to 'Edit', edit_admin_event_path(@event) %> |
 <%= link_to 'Back', admin_events_path %>
