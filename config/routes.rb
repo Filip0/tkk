@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
 
 
@@ -6,6 +7,8 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :blogs, only: [:show, :index]
+  resources :events, only: [:show, :index]
+  resources :pages, only: [:show, :index]
 
 
 
@@ -14,6 +17,7 @@ Rails.application.routes.draw do
     resources :blogs
     resources :users, only: [:new, :create, :show, :index]
     resources :pages
+    resources :events
   end
 
   get '/:id', to: 'pages#show'

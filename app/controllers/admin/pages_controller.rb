@@ -21,7 +21,7 @@ class Admin::PagesController < ApplicationController
 
 		respond_to do |format|
 			if @page.save
-				format.html { redirect_to [:admin, @page], notice: 'Page has been create'}
+				format.html { redirect_to [:admin, @page], notice: 'Page has been created'}
 				format.json { render :show, status: :created, location: @page }
 			else
 				format.html { render :new }
@@ -44,8 +44,8 @@ class Admin::PagesController < ApplicationController
 
 	def destroy
 		@page.destroy
-		repond_to do |format|
-			format.html { redirect_to root, notice: 'Page was successfully destroyed.' }
+		respond_to do |format|
+			format.html { redirect_to admin_pages_path, notice: 'Page was successfully destroyed.' }
 			format.json { head :no_content}
 		end
 	end

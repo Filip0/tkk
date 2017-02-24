@@ -12,15 +12,15 @@
       <header>
 
         <div class="logo">
-          <%= image_tag("logo3.png") %>
+          <a href="/"><%= image_tag("logo3.png") %></a>
         </div>
         <nav>
           <ul class="nav-ul">
-            <li><a href="/about">About</a></li>
-            <li><a href="/blogs">Blog</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/events">KONSERTER</a></li>
+            <li><a href="/about">OM OSS</a></li>
+            <li><a href="/contact">KONTAKT</a></li>
             <% if user_signed_in? %>
-              <li><%= link_to("Admin", admin_root_url) %></li>
+              <li><%= link_to("ADMIN", admin_root_url) %></li>
             <% end %>
           </ul>
         </nav>
