@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  //border: 1px solid #cbcbcb;
+
+  tr {
+    border-bottom: 2px solid #DDD;
+  }
+
+  td, th {
+    padding: 0.5em 1em;
+  }
+}

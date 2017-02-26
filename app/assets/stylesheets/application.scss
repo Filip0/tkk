@@ -1,0 +1,17 @@
+// Gems and vendor
+@import "normalize-rails";
+@import "jquery-ui/core";
+@import "jquery-ui/datepicker";
+@import "jquery-ui/theme";
+@import "vendor/simplemde.min";
+
+// Shared
+@import "common/variables";
+@import "common/fonts";
+@import "common/form";
+@import "common/footer";
+@import "common/table";
+@import "common/header";
+
+@import "scaffolds";
+@import "events";

@@ -1,0 +1,26 @@
+footer {
+  margin-top: $spacing-unit;
+  background-color: $footer-bg-color;
+  font-weight: 100;
+}
+.footer {
+  flex: 1;
+  align-items: center;
+  max-width: 50em;
+  margin: 0 auto $spacing-unit auto;
+  display: flex;
+  flex-direction: column;
+}
+a.no-style {
+  color: #3A3D3B;
+  text-decoration: none;
+}
+.footer-social {
+  flex: 1;
+}
+.footer-copyright {
+  font-size: 20px;
+  flex: 1;
+  color: #3A3D3B;
+  font-weight: bold;
+}
