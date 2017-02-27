@@ -1,1 +1,15 @@
-Kul Jakke er leverandør av kreative løsninger.
+.promoted-events
+  - @promoted_events.each do |event|
+    .event-card.card
+      = image_tag("http://ultimateclassicrock.com/files/2014/10/Led-Zeppelin1.jpg", class: "card-image")
+      .card-content
+        .card-title=event.title
+
+
+
+.upcoming-events
+  - @events.each do |event|
+    .event
+      %span.event-title=event.title
+      %span.event-price=event.price
+      %span.event-time=event.start_date.to_s(:short)

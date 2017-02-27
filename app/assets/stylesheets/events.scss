@@ -1,40 +1,40 @@
-// Place all the styles related to the Events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.events-month-list {
-  .month {
-    .month-name {
-      font-size: 18px;
-      padding-top: 1em;
+.promoted-events {
+  display: flex;
+  padding-bottom: $padding-unit;
+
+  .event-card {
+    flex: 1;
+  }
+}
+
+.card {
+  margin: 0 $padding-unit;
+  //background-color: #CCCCCC;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.25);
+  .card-content {
+    .card-title {
+
     }
   }
-  .days {
-    .day {
-      width: 100%;
-      display: flex;
-      border: 1px solid black;
+  .card-image {
+
+  }
+}
+
+.upcoming-events {
+  .event {
+    display: flex;
+    margin-bottom: $padding-unit;
+    border: 1px solid rgba(0,0,0,.125);
+    .event-title {
+      font-weight: bold;
     }
-    .day-title {
-      font-size: 24px;
-      width: 40px;
-      flex: 0 0 auto;
-      text-align: center;
-    }
-    .events {
-      flex: 1 1 auto;
-    }
-    .event {
-      display: flex;
-      .event-title {
-        font-weight: bold;
-        font-size: 18px;
-      }
-      .event-price {
-        text-align: right;
-        margin-left: auto;
-      }
-      .event-time {
-        text-align: right;
+    .event-price {
+      margin-left: auto;
+      &:after {
+        content: ',-';
       }
     }
   }
