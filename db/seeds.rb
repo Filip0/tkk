@@ -25,6 +25,7 @@ puts "Creating events"
   end_date = start_date + rand(0..3).hours
   performer = Faker::RockBand.name
   location = Faker::Address.city
+  image = Faker::Placeholdit.image("50x50")
   Event.create(
     title: "#{performer} at #{location}",
     performer: performer,
@@ -32,7 +33,8 @@ puts "Creating events"
     end_date: end_date,
     location: Faker::Address.city,
     price: Faker::Number.number(3),
-    description: Faker::Lorem.paragraph(2)
+    description: Faker::Lorem.paragraph(2),
+    image: image
   )
   print '.'
 end

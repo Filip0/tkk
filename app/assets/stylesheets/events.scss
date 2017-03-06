@@ -1,6 +1,8 @@
 .promoted-events {
   display: flex;
   padding-bottom: $padding-unit;
+  margin-left: -($padding-unit);
+  margin-right: -($padding-unit);
 
   .event-card {
     flex: 1;
@@ -28,11 +30,31 @@
     display: flex;
     margin-bottom: $padding-unit;
     border: 1px solid rgba(0,0,0,.125);
+    .event-image {
+      height: 7em;
+      width: 7em;
+    }
+    .event-details {
+      padding-left: $padding-unit;
+      padding-top: $padding-unit;
+      i.fa {
+        width: 17px;
+        text-align: center;
+        color: $blue;
+      }
+    }
     .event-title {
       font-weight: bold;
+      font-size: 1.2em;
     }
     .event-price {
       margin-left: auto;
+      align-self: center;
+      font-size: 2em;
+      padding: $padding-unit;
+      i.fa {
+        color: $blue;
+      }
       &:after {
         content: ',-';
       }

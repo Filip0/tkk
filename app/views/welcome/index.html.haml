@@ -10,6 +10,15 @@
 .upcoming-events
   - @events.each do |event|
     .event
-      %span.event-title=event.title
-      %span.event-price=event.price
-      %span.event-time=event.start_date.to_s(:short)
+      =image_tag(event.image.url(:thumb), class: "event-image")
+      .event-details
+        .event-title=event.performer
+        .event-location
+          %i.fa.fa-map-marker{aria: {hidden: "true"}}
+          =event.location
+        .event-time
+          %i.fa.fa-calendar{aria: {hidden: "true"}}
+          =event.start_date.to_s(:short)
+      %span.event-price
+        %i.fa.fa-ticket{aria: {hidden: "true"}}
+        =event.price
