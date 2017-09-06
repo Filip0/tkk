@@ -2,39 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .events-month-list {
-  .month {
-    .month-name {
-      font-size: 18px;
-      padding-top: 1em;
-    }
-  }
   .days {
     .day {
       width: 100%;
       display: flex;
-      border: 1px solid black;
+      border-bottom: 1px solid $gray-color;
+      margin: 1em 0;
     }
     .day-title {
-      font-size: 24px;
+      font-size: 32px;
       width: 40px;
       flex: 0 0 auto;
       text-align: center;
+      color: #6e3a3b;
+      margin: 1em;
+      .month-name {
+        font-size: 14px;
+      }
     }
     .events {
       flex: 1 1 auto;
     }
     .event {
-      display: flex;
+      padding: 0.5em 0;
+      &:not(:first-child) {
+        border-top: 1px solid $gray-color-dark;
+      }
       .event-title {
-        font-weight: bold;
-        font-size: 18px;
-      }
-      .event-price {
-        text-align: right;
-        margin-left: auto;
-      }
-      .event-time {
-        text-align: right;
+        font-weight: 500;
+        font-size: 24px;
+        color: #3c3c3c;
+        margin: 0;
       }
     }
   }

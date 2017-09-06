@@ -17,7 +17,7 @@ body {
   background-color: #f1f1f1;
 }
 .header-wrapper {
-  background-color: #f7f0dd;
+  background-color: #292929;
   width: 100%;
   position: relative;
 
@@ -93,7 +93,7 @@ nav {
     a:link {
       font-size: 16px;
       font-weight: bold;
-      color: #3A3D3B;
+      color: #e2e2e2;
       text-decoration: none;
     }
     a:active {
@@ -101,6 +101,7 @@ nav {
     }
     a:visited {
       text-decoration: none;
+      color: #e2e2e2;
     }
     a:hover {
       text-decoration: underline;
@@ -134,7 +135,7 @@ ul.list-inline > li {
 }
 footer {
   margin-top: $spacing-unit;
-  background-color: #f7f0dd;
+  background-color: #999999;
   font-weight: 100;
 }
 .footer {
