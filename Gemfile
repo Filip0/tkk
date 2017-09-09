@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.0'
 
 # Add haml markup language
 gem "haml-rails", "~> 0.9"
-gem "haml-lint"
+gem 'haml_lint', require: false
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
