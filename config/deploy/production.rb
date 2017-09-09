@@ -61,3 +61,25 @@ set :deploy_to, '/srv/www/tkk'
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+namespace :rails do
+  desc "Open the rails console on one of the remote servers"
+  task :console, :roles => :app do
+    hostname = find_servers_for_task(current_task).first
+    exec "ssh -l #{user} #{hostname} -t 'source \"$HOME/.rvm/scripts/rvm\" && cd #{current_path}; bundle exec rails console #{rails_env}'"
+  end
+
+  desc "Open the rails dbconsole on one of the remote servers"
+  task :dbconsole, :roles => :app do
+    hostname = find_servers_for_task(current_task).first
+    exec "ssh -l #{user} #{hostname} -t 'source \"$HOME/.rvm/scripts/rvm\" && cd #{current_path}; bundle exec rails dbconsole #{rails_env}'"
+  end
+
+  # Short aliases
+  task :c, :roles => :app do
+    console
+  end
+
+  task :dbc, :roles => :app do
+    dbconsole
+  end
+end
