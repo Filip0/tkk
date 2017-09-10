@@ -15,11 +15,7 @@
         %nav
           %ul.nav-ul
             %li
-              %a{:href => "/events"} KONSERTER
-            %li
-              %a{:href => "/about"} OM OSS
-            %li
-              %a{:href => "/contact"} KONTAKT
+              %a{:href => "/info"} INFO
             - if user_signed_in?
               %li= link_to("ADMIN", admin_root_url)
     .content
