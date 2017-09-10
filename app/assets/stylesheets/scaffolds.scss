@@ -76,7 +76,7 @@ header {
 }
 
 nav {
-  flex: 0 0 60%;
+  flex: 1 0 60%;
   //width: 60%;
   display: inline-block;
   margin-bottom: 0.5em;
@@ -84,6 +84,7 @@ nav {
   .nav-ul {
     margin: 0;
     padding: 0;
+    text-align: right;
 
     li {
       display: inline;
