@@ -60,6 +60,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano-faster-assets'
+	gem 'capistrano-rails-console', require: false
   gem 'quiet_assets'
 	gem 'faker', '1.7.3'
 end

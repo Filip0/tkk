@@ -30,17 +30,19 @@
       = yield
     %footer
       .footer
+        .footer-copyright
+          TRONDHEIM KONSERTKOLLEKTIV
         .footer-social
           %ul.list-inline
             %li
-              %a.no-style{:href => "http://fb.me/trondheimkonsertkollektiv"}
+              %a.no-style{href: "http://fb.me/trondheimkonsertkollektiv", target: "_blank" }
                 %span.fa-stack.fa-lg
                   %i.fa.fa-circle.fa-stack-2x
                   %i.fa.fa-facebook.fa-stack-1x.fa-inverse
             %li
-              %a.no-style{:href => "https://www.instagram.com/konsertkollektiv/"}
+              %a.no-style{href: "https://www.instagram.com/konsertkollektiv/", target: "_blank" }
                 %span.fa-stack.fa-lg
                   %i.fa.fa-circle.fa-stack-2x
-                  %i.fa.fa-twitter.fa-stack-1x.fa-inverse
-        .footer-copyright
-          TRONDHEIM KONSERTKOLLEKTIV
+                  %i.fa.fa-instagram.fa-stack-1x.fa-inverse
+        .footer-logo
+          = image_tag("logo-black.png")

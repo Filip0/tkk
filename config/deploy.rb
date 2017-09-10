@@ -1,11 +1,11 @@
 # config valid only for current version of Capistrano
-lock '3.4.0'
+lock '3.9.1'
 
 set :application, 'tkk'
 set :repo_url, 'git@github.com:Filip0/tkk.git'
 
 set :rvm_type, :user
-set :rvm_ruby_version, '2.1.4'
+set :rvm_ruby_version, '2.3.4'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
