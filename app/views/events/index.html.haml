@@ -13,6 +13,11 @@
                 .event
                   .event-meta
                     %h2.event-title=event.title
-                    .event-price=event.price
-                    .event-time=event.start_date.to_s(:time)
+                    .event-price
+                      %i.fa.fa-ticket{ 'aria-hidden': 'true' }
+                      =event.price
+                    .event-time
+                      %i.fa.fa-calendar{ 'aria-hidden': 'true' }
+                      =event.start_date.to_s(:time)
+                    .event-description=event.description
                   .event-image=image_tag event.image.url(:thumb)
