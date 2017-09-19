@@ -33,6 +33,15 @@
       justify-content: space-between;
       padding: 0.5em 0;
 
+      .event-details {
+        width: 80%;
+      }
+
+      .event-image {
+        width: 20%;
+        padding: 0 5px;
+      }
+
       .event-title {
         width: 100%;
         font-weight: 500;
@@ -50,9 +59,7 @@
           padding-left: 1em;
         }
       }
-      .event-image {
-        max-height: 100px;
-      }
+
     }
   }
 }
