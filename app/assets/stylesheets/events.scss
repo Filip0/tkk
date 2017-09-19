@@ -24,20 +24,34 @@
       flex: 1 1 auto;
     }
     .event {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.5em 0;
       &:not(:first-child) {
         border-top: 1px solid $gray-color-dark;
       }
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0.5em 0;
+
       .event-title {
+        width: 100%;
         font-weight: 500;
         font-size: 24px;
         color: #3c3c3c;
         margin: 0;
       }
+      .event-meta {
+        display: flex;
+
+        i.fa {
+          padding-right: 3px;
+        }
+        .event-time {
+          padding-left: 1em;
+        }
+      }
       .event-image {
-        height: 100px;
+        max-height: 100px;
       }
     }
   }
