@@ -1,0 +1,11 @@
+a.btn {
+  padding: 0.5em 1em;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 5px 0;
+
+  &.btn-ticket {
+    background-color: #6e3a3b;
+    color: white;
+  }
+}

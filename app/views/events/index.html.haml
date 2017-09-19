@@ -22,5 +22,8 @@
                         %i.fa.fa-clock-o{ 'aria-hidden': 'true' }
                         =event.start_date.to_s(:time)
                     .event-description=event.description
+                    - if event.ticket_link.present?
+                      = link_to "Billetter", event.ticket_link, { class: "btn btn-ticket", target: "blank"}
+
                   - if event.image.present?
                     .event-image=image_tag event.image.url(:thumb)
