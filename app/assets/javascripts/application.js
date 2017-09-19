@@ -18,17 +18,3 @@
 //= require simplemde.min
 //= require turbolinks
 //= require_tree .
-
-
-$(function() {
-	var elements = $(".simplemde");
-	for (var i = elements.length - 1; i >= 0; i--) {
-		new SimpleMDE({ element: elements[i] });
-	};
-});
-
-$( function() {
-	$( "#tabs" ).tabs({
-		collapsible: true
-	});
-} );
