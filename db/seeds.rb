@@ -21,8 +21,8 @@ User.create(first_name: "Admin", email: "admin@admin.com", password: "password")
 
 puts "Creating events"
 100.times do
-  start_date = Faker::Date.between(Date.today, 6.months.from_now)
-  end_date = start_date + rand(0..3).hours
+  start_date = Faker::Date.between(Date.today, 6.months.from_now) + rand(18..23).hours
+  end_date = start_date + rand(0..2).hours
   performer = Faker::RockBand.name
   location = Faker::Address.city
   Event.create(

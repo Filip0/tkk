@@ -10,7 +10,7 @@
   %body.Site
     %header
       .logo
-        %a{:href => "/"}= image_tag("logo-red.png")
+        %a{:href => "/"}= image_tag("logo.png")
       %nav
         %ul.nav-ul
           %li
@@ -27,18 +27,19 @@
       - elsif flash[:alert]
         .alert= alert
       = yield
-    %footer
-      .footer
-        .footer-social
-          %ul.list-inline
-            %li
-              %a.no-style{:href => "http://facebook.com/kuljakk"}
-                %i.fa.fa-facebook.fa-2x
-            %li
-              %a.no-style{:href => "http://twitter.com/kuljakke"}
-                %i.fa.fa-twitter.fa-2x
-            %li
-              %a.no-style{:href => "http://instagram.com/kuljakke"}
-                %i.fa.fa-instagram.fa-2x
-        .footer-copyright
-          Copyright @ Kul Jakke Produksjoner
+      %footer
+        .footer
+          .footer-copyright
+            TRONDHEIM KONSERTKOLLEKTIV
+          .footer-social
+            %ul.list-inline
+              %li
+                %a.no-style{href: "http://fb.me/konsertkollektiv", target: "_blank" }
+                  %span.fa-stack.fa-lg
+                    %i.fa.fa-circle.fa-stack-2x
+                    %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+              %li
+                %a.no-style{href: "https://www.instagram.com/konsertkollektiv/", target: "_blank" }
+                  %span.fa-stack.fa-lg
+                    %i.fa.fa-circle.fa-stack-2x
+                    %i.fa.fa-instagram.fa-stack-1x.fa-inverse
