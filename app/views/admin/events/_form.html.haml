@@ -3,8 +3,8 @@
   .form-inputs
     = f.input :title
     = f.input :performer
-    = f.input :start_date
-    = f.input :end_date
+    = f.input :start_date, as: :string, input_html: { class: 'datetimepicker' }
+    = f.input :end_date, as: :string, input_html: { class: 'datetimepicker' }
     = f.input :description, input_html: { class: 'simplemde' }
     = f.input :location
     = f.input :ticket_link

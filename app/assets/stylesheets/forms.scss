@@ -1,0 +1,11 @@
+.input.string,
+.input.email,
+.input.file {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5em;
+
+  label {
+    width: 200px;
+  }
+}
