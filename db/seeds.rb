@@ -36,3 +36,5 @@ puts "Creating events"
   )
   print '.'
 end
+
+Page.create(title: "Informasjon", name: "info", text: "Some text here")

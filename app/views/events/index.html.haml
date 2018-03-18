@@ -15,11 +15,11 @@
                   .event-details
                     .event-meta
                       .event-price
-                        %i.fa.fa-ticket{ 'aria-hidden': 'true' }
+                        %i.fa.fa-ticket-alt{ 'aria-hidden': 'true' }
                         =event.price
                         ,-
                       .event-time
-                        %i.fa.fa-clock-o{ 'aria-hidden': 'true' }
+                        %i.far.fa-clock{ 'aria-hidden': 'true' }
                         =event.start_date.to_s(:time)
                     .event-description=event.description
                     - if event.ticket_link.present?
@@ -27,3 +27,4 @@
 
                   - if event.image.present?
                     .event-image=image_tag event.image.url(:thumb)
+= will_paginate @posts

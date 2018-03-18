@@ -3,7 +3,6 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Trondheim Konsertkollektiv
-    %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", :rel => "stylesheet"}/
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
@@ -34,9 +33,9 @@
               %a.no-style{href: "http://fb.me/konsertkollektiv", target: "_blank" }
                 %span.fa-stack.fa-lg
                   %i.fa.fa-circle.fa-stack-2x
-                  %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                  %i.fab.fa-facebook-f.fa-stack-1x.fa-inverse
             %li
               %a.no-style{href: "https://www.instagram.com/konsertkollektiv/", target: "_blank" }
                 %span.fa-stack.fa-lg
                   %i.fa.fa-circle.fa-stack-2x
-                  %i.fa.fa-instagram.fa-stack-1x.fa-inverse
+                  %i.fab.fa-instagram.fa-stack-1x.fa-inverse

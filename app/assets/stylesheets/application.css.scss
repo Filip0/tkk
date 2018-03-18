@@ -1,4 +1,7 @@
 @import "normalize-rails";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "fonts";
 @import "variables";
 @import "scaffolds";
 @import "buttons";
@@ -6,5 +9,6 @@
 @import "jquery-ui/core";
 @import "jquery-ui/datepicker";
 @import "jquery-ui/theme";
+@import "pagination";
 
 @import "events";

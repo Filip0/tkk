@@ -1,0 +1,5 @@
+"no":
+  will_paginate:
+    previous_label: "Forrige"
+    next_label: "Neste"
+    page_gap: "&hellip;"
